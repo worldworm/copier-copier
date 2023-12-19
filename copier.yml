@@ -1,0 +1,14 @@
+_subdirectory: template
+_templates_suffix: .jinja
+_answers_file: .copier-answers.copier.yml
+
+is_bp:
+  type: bool
+  help: Is blueprint template?
+  default: false
+
+template_suffix:
+  type: str
+  help: Template suffix
+  when: "{{ not is_bp }}"
+  default: ""
