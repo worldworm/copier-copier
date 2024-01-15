@@ -1,0 +1,5 @@
+# Changes here will be overwritten by Copier
+_commit: v1.0.0
+_src_path: https://github.com/worldworm/copier-meta-copier.git
+template_suffix: copier
+use_docker: true

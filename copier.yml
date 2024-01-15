@@ -1,6 +1,14 @@
 _subdirectory: template
-_templates_suffix: .jinja
+_templates_suffix: .j2
 _answers_file: .copier-answers.copier.yml
+_exclude: []
+_envops:
+    block_start_string: "[%"
+    block_end_string: "%]"
+    comment_start_string: "[#"
+    comment_end_string: "#]"
+    variable_start_string: "[["
+    variable_end_string: "]]"
 
 is_bp:
   type: bool
@@ -10,5 +18,15 @@ is_bp:
 template_suffix:
   type: str
   help: Template suffix
-  when: "{{ not is_bp }}"
+  when: "[[ not is_bp ]]"
   default: ""
+
+use_common:
+  type: bool
+  help: Use common questions?
+  default: true
+
+use_docker:
+  type: bool
+  help: Use Docker?
+  default: true
