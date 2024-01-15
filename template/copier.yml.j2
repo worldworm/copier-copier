@@ -1,6 +1,8 @@
 _subdirectory: template
 _templates_suffix: .jinja
+[% if not is_bp -%]
 _answers_file: .copier-answers[[ "" if template_suffix == "" else "." ~ template_suffix ]].yml
+[% endif %]
 [% if use_common %]
 [% include "shared-config/common.yml" %]
 [% endif -%]
